@@ -1,0 +1,15 @@
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    .input-holder {
+        > div {
+            display: grid;
+        }
+    }
+}
+
+.subscript {
+    font-size: 10px;
+}

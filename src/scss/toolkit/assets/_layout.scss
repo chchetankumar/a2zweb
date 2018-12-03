@@ -1,13 +1,64 @@
 .row {
     padding-top: 15px;
     padding-bottom: 15px;
+    align-items: center;
 
     .input {
         padding-left: 10px;
         padding-right: 10px;
     }
+
+}
+
+.subscript {
+    font-size: 10px;
+}
+
+.form {
+    label {
+        display: flex;
+        font-weight: 500;
+    }
+}
+.header {
+    position: fixed;
+    top: 20px;
+    font-size: 18px;
+    width: 100%;
+    margin-left: 30px;
+    display: flex;
+    
+    nav {
+        color: #afd390;
+        position: absolute;
+        top: 35px;
+        left: 120px;
+    }
+
+    img {
+        height: 60px;
+        width: 90px;
+    }
 }
 
 .grid {
     display: grid;
+}
+
+.input-holder {
+    margin-left: 5%;
+    width: 80%;
+    
+    > div {
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) {
+    div[role="dialog"] {
+    .modal-dialog {
+        width: 700px;
+        margin: 30px auto;
+    }
+}
 }

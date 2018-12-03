@@ -3,7 +3,7 @@
     padding: 10%;
 }
 
-.sign-up {
+.sign-up, .address-form {
     padding-bottom: 10%;
     .input-holder {
         display: inline;
@@ -14,5 +14,20 @@
         .col-md-10 {
             display: flex;
         }
+    }
+}
+
+.customer-utilities {
+    display: inline;
+    position: absolute;
+    top: 70%;
+    right: 10%;
+    font-size: 15px;
+}
+
+.input-holder {
+    margin-right: 5px;
+    .alert-danger {
+        background: none;
     }
 }

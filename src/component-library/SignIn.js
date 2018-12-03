@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
-import LoginComponent from './Login';
-import SignUp from './SignUp';
+import LoginComponent from './forms/Login';
+import SignUp from './forms/SignUp';
 
 
 class SignIn extends React.Component {
@@ -32,11 +32,14 @@ class SignIn extends React.Component {
 
     render() {
         
-        return <div>
+        return <>
             <a onClick={this.showLoginScreen} > SignIn</a>
             <Modal show={this.state.showLoginScreen|| this.state.showSignUpScreen} onHide={this.handleClose.bind(this)} >
             <Modal.Header closeButton>
-                <Modal.Title> Login </Modal.Title>
+                <Modal.Title> {
+                    this.state.showLoginScreen ? `Login` : `SignUp` 
+                }
+                </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 { 
@@ -58,7 +61,7 @@ class SignIn extends React.Component {
                 }               
             </Modal.Body>
             </Modal>
-        </div>;
+        </>;
     }
 }
 

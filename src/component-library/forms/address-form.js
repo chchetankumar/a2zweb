@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import TextControl from '../elements/form-input-text' ;
-import updateState from './form-update-state';
+import {updateStateEvent} from './form-update-state';
 import axios from 'axios';
 
 export default class AddressForm extends Component {
     constructor(props) {
         super(props);
-        this.updateState = updateState.bind(this);
+        this.updateStateEvent = updateStateEvent.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.getInitialState();
         this.validators={
@@ -48,9 +48,9 @@ export default class AddressForm extends Component {
                     <div className="col-md-12">
                         <label>
                         Name:
-                        <TextControl type="text" onBlur={ this.updateState } name='firstName' valid={this.state.validity.firstName} error="First Name should contain only Letters and start with Capital letters" subscript="First Name"/> 
-                        <TextControl type="text"   onBlur={ this.updateState } name='middleName' subscript="Middle Name"/> 
-                        <TextControl type="text"  onBlur={ this.updateState } name='lastName' subscript="Last Name" /> 
+                        <TextControl type="text" onBlur={ this.updateStateEvent } name='firstName' valid={this.state.validity.firstName} error="First Name should contain only Letters and start with Capital letters" subscript="First Name"/> 
+                        <TextControl type="text"   onBlur={ this.updateStateEvent } name='middleName' subscript="Middle Name"/> 
+                        <TextControl type="text"  onBlur={ this.updateStateEvent } name='lastName' subscript="Last Name" /> 
                         </label>
                     </div>
                 </div>
@@ -58,14 +58,14 @@ export default class AddressForm extends Component {
                     <div className="col-md-12">
                         <label>
                             Mobile Phone: 
-                            <TextControl type="text" onBlur={ this.updateState } name='phoneNumber' error="Phone Numbers should contain only numbers" valid={this.state.validity.phoneNumber} /> 
+                            <TextControl type="text" onBlur={ this.updateStateEvent } name='phoneNumber' error="Phone Numbers should contain only numbers" valid={this.state.validity.phoneNumber} /> 
                         </label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
                         <label> 
-                            Address Line1: <TextControl type="text" onBlur={ this.updateState } name='address'  /> 
+                            Address Line1: <TextControl type="text" onBlur={ this.updateStateEvent } name='address'  /> 
                         </label>
                     </div>
                 </div>
@@ -77,31 +77,31 @@ export default class AddressForm extends Component {
                     </div>
                     <div className="col-md-6">
                         <label>
-                            Area: <TextControl type="text" onBlur={ this.updateState } name='area'  /> 
+                            Area: <TextControl type="text" onBlur={ this.updateStateEvent } name='area'  /> 
                         </label>
                     </div>              
                 </div>
                 <div className="row">
                     <div className="col-md-6">
                         <label>
-                            Landmark: <TextControl type="text" onBlur={ this.updateState } name='landmark' /> 
+                            Landmark: <TextControl type="text" onBlur={ this.updateStateEvent } name='landmark' /> 
                         </label>
                     </div> 
                     <div className="col-md-6">
                         <label>
-                            City: <TextControl type="text" onBlur={ this.updateState } name='city' /> 
+                            City: <TextControl type="text" onBlur={ this.updateStateEvent } name='city' /> 
                         </label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-6">
                         <label>
-                            State:  <TextControl type="text" onBlur={ this.updateState } name='state' /> 
+                            State:  <TextControl type="text" onBlur={ this.updateStateEvent } name='state' /> 
                         </label>
                     </div>
                     <div className="col-md-6">
                         <label>
-                            Country: <TextControl type="text" onBlur={ this.updateState } name='country' /> 
+                            Country: <TextControl type="text" onBlur={ this.updateStateEvent } name='country' /> 
                         </label>
                     </div>
                 </div>

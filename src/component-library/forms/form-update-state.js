@@ -1,9 +1,9 @@
 
 import { validators } from '../../utils/utilities';
 
-function updateState(e) {   
-    const val = e.currentTarget.value; 
-    let name = e.currentTarget.name;       
+function updateStateEvent(e) {   
+    const val = e.target.value; 
+    let name = e.target.name;       
     if (this.state[name] != val || !this.state[name].length) {
         const reg = this.validators.hasOwnProperty(name)? new RegExp(validators[this.validators[name]]):null;
         let state = {
@@ -18,4 +18,11 @@ function updateState(e) {
         this.setState(state);
     }
 };
-export default updateState;
+
+
+function updateStateOption(option, prop) {
+    this.setState({
+       [prop]: option.val()
+    });
+}
+export  {updateStateEvent, updateStateOption} ;

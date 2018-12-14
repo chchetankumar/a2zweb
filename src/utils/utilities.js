@@ -14,4 +14,14 @@ const validators = {
     'phoneNumber' : /[\d\+\ ]+/,
 }
 
-export { extend, validators };
+const Units = [
+    {id: 'kg', name: 'Kilogram'},
+    {id: 'gm', name: 'grams'},
+    {id: 'pound', name: 'pound'},
+    {id: 'ltr', name:'litre' },
+    {id: 'ml', name:'millileters'},
+    { id: 'm', name:'meter'},
+    { id: 'cm', name:'centmeter'},
+];
+
+export { extend, validators, Units };

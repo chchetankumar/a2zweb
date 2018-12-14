@@ -5,7 +5,8 @@ import { extend } from '../../utils/utilities';
 
 const AZButton = (props) => {
     const newProps={ 
-        type: "button"
+        type: "button",
+        className: 'btn btn-primary'
     };
 
     extend(newProps, [props]);
